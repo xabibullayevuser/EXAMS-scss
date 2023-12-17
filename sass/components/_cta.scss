@@ -1,0 +1,85 @@
+.cta {
+	z-index: 1000;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translate(-50%, -22rem);
+	width: 100%;
+	padding-inline: 4rem;
+
+	@include respond(tab-port) {
+		transform: translate(-50%, -26.4rem);
+	}
+
+	@include respond(mobile) {
+		padding-inline: 2.4rem;
+		transform: translate(-50%, -19rem);
+	}
+
+	.container {
+		background-color: var(--clr-peach);
+		border-radius: 1.5rem;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-block: 7.2rem;
+		padding-inline: 9.5rem;
+		background-image: url(../assets/shared/desktop/bg-pattern-call-to-action.svg);
+		background-position: right 0 top 50%;
+		background-repeat: no-repeat;
+
+		@include respond(tab-port) {
+			flex-direction: column;
+			justify-content: center;
+			row-gap: 3.2rem;
+			text-align: center;
+			background-position: left -2rem top 50%;
+			padding-block: 5.7rem;
+		}
+
+		@include respond(mobile) {
+			background-position: right -31rem top -10.2rem;
+			padding-inline: 2.4rem;
+			justify-content: initial;
+			padding-block: 6.4rem;
+		}
+	}
+
+	.cta--content {
+		color: var(--clr-white);
+
+		span {
+			display: block;
+			max-width: 26.8rem;
+			font-size: 4rem;
+			font-weight: 500;
+			line-height: 4rem;
+			margin-bottom: 2.2rem;
+
+			@include respond(tab-port) {
+				margin-inline: auto;
+			}
+
+			@include respond(mobile) {
+				max-width: 100%;
+				margin-inline: 0;
+				font-size: 3.2rem;
+				line-height: 3.6rem;
+			}
+		}
+
+		p {
+			max-width: 45.9rem;
+
+			@include respond(tab-port) {
+				max-width: 45rem;
+			}
+
+			@include respond(mobile) {
+				max-width: 100%;
+			}
+		}
+	}
+}
